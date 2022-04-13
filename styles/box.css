@@ -1,0 +1,33 @@
+.score {
+  top: 78%;
+  left: 70%;
+}
+
+.genreBox {
+  display: none;
+  transition: 2s;
+}
+
+.boxItem:hover .genreBox {
+  transition: 2s;
+  display: block;
+  z-index: 20;
+}
+
+.boxItem:hover .score {
+  opacity: 0.5;
+}
+
+.pic {
+  z-index: -1;
+  transition: 2s;
+  border-radius: 5%;
+}
+.boxItem:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transition: 0.5s;
+}
+
+/* .boxitem {
+  margin: 10px;
+} */

@@ -1,16 +1,41 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[url('../images/peakpx(12).jpg')]  text-gray-300;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+button.eWjCzc {
+  background-color: black;
 }
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
 }
+
+li {
+  cursor: pointer;
+
+  padding: 5px;
+}
+
+li:hover {
+  background-color: orange;
+  color: black;
+  border-radius: 10px;
+}
+
+.sc-jSMfEi.grUxXV.rec.rec-carousel-wrapper {
+  margin-left: 0;
+}
+
+/* .pag button {
+  font-size: 15px;
+} */
