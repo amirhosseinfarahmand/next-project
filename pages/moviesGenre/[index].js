@@ -48,9 +48,7 @@ export default function Home({ data, movieGunres, seriesGenres, tvData }) {
         seriesGenres={seriesGenres}
       />
       <div className=" h-24 bg-stone-900 shadow-lg shadow-stone-500 flex justify-center items-center">
-        <p className="text-[25px] " style={{ fontFamily: "cursive" }}>
-          {movieName}
-        </p>
+        <p className="text-[25px] font-Cursive">{movieName}</p>
       </div>
       <MainBox state={filteredGenres} />
     </div>

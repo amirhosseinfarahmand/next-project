@@ -41,14 +41,12 @@ export default function Home({ data, movieGunres, tvData, seriesGenres }) {
         seriesGenres={seriesGenres}
       />
       <div className=" h-24 bg-stone-900 shadow-lg shadow-stone-500 flex justify-center items-center">
-        <p className="text-[25px] " style={{ fontFamily: "cursive" }}>
-          All Series
-        </p>
+        <p className="text-[25px] font-Cursive ">All Series</p>
       </div>
       <MainBox state={tvState} />
       <div className="my-[50px] flex justify-center">
         <Link href="/allTV/1">
-          <p className="text-[18px] font-mono bg-[#D97706] shadow-lg shadow-amber-500 p-3 rounded-lg cursor-pointer hover:scale-110 hover:">
+          <p className="text-[18px] font-mono bg-[#D97706] shadow-lg mb-5 shadow-amber-500 p-3 rounded-lg cursor-pointer md:hover:scale-110 ">
             Click for more Series
           </p>
         </Link>

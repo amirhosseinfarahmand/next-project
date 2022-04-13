@@ -9,6 +9,7 @@ module.exports = {
       backgroundImage: {
         "pic-body": "url('./images/black-background-g182083a32_1920.jpg')",
       },
+      fontFamily: { Cursive: ["Cursive"] },
     },
   },
   plugins: [],

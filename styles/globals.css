@@ -39,3 +39,24 @@ li:hover {
 /* .pag button {
   font-size: 15px;
 } */
+
+.tst {
+  display: flex;
+  justify-content: center;
+}
+
+/* button.eWjCzc {
+  background-color: black;
+} */
+
+/* button.eWjCzc {
+  background-color: black;
+} */
+
+button.eWjCzc:hover:enabled {
+  background-color: black;
+}
+
+/* .eAyARa:hover:enabled {
+  background-color: red;
+} */

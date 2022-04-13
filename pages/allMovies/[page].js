@@ -53,9 +53,7 @@ export default function Home({
         seriesGenres={seriesGenres}
       />
       <div className=" h-24 bg-stone-900 shadow-lg shadow-stone-500 flex justify-center items-center">
-        <p className="text-[25px] " style={{ fontFamily: "cursive" }}>
-          All movies
-        </p>
+        <p className="text-[25px] font-Cursive ">All movies</p>
       </div>
       <MainBox state={searchData.length ? searchData : data.results} />
 

@@ -49,15 +49,13 @@ export default function Home({
         topRatedMovies={topRatedMovies}
       />
       <div className=" h-24 bg-stone-900 shadow-lg shadow-stone-500 flex justify-center items-center">
-        <p className="text-[25px] " style={{ fontFamily: "cursive" }}>
-          All movies
-        </p>
+        <p className="tit text-[25px] font-Cursive">All Movies</p>
       </div>
 
       <MainBox state={allMovie} />
       <div className="my-10 flex justify-center">
         <Link href="/allMovies/1">
-          <p className="text-[18px] font-mono bg-[#D97706] shadow-lg shadow-amber-500 p-3 rounded-lg cursor-pointer hover:scale-110 hover:">
+          <p className="text-[18px] font-mono mb-5 bg-[#D97706] shadow-lg shadow-amber-500 p-3 rounded-lg cursor-pointer md:hover:scale-110 ">
             Click for more Movies
           </p>
         </Link>

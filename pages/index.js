@@ -59,14 +59,12 @@ export default function Home({
         seriesGenres={seriesGenres}
       />
       <div className=" h-24 bg-stone-900 shadow-lg shadow-stone-500 flex justify-center items-center">
-        <p className="text-[25px] " style={{ fontFamily: "cursive" }}>
-          All Movies and All Series
-        </p>
+        <p className="text-[25px] font-Cursive">All Movies and All Series</p>
       </div>
       <MainBox state={allData} />
       <div className="my-10 flex justify-center">
         <Link href="/1">
-          <p className="text-[18px] font-mono bg-[#D97706] shadow-lg shadow-amber-500 p-3 rounded-lg cursor-pointer hover:scale-110 hover:">
+          <p className="text-[18px] font-mono bg-[#D97706] shadow-lg mb-5 shadow-amber-500 p-3 rounded-lg cursor-pointer md:hover:scale-110 ">
             Click for all Movies and Series
           </p>
         </Link>

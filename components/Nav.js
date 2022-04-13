@@ -493,23 +493,7 @@ const Nav = ({
   };
 
   return (
-    <nav className="flex space-x-10 h-85  p-5 bg-[#27272A] w-full bg-opacity-50  px-10 text-2xl relative">
-      {/* <Carousel
-        itemsToShow={2}
-        enableAutoPlay={true}
-        disableArrowsOnEnd={false}
-        autoPlaySpeed={1000}
-        itemsToScroll={true}
-      >
-        {state.slice(0, 6).map((item, index) => {
-          return (
-            <div style={{ width: "300px", height: "300px" }}>
-              <NavBox state={item} key={index} />
-            </div>
-          );
-        })}
-      </Carousel> */}
-
+    <nav className="flex justify-center h-85  p-5 bg-[#27272A] w-full bg-opacity-50  px-10 text-2xl relative">
       <div
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
@@ -611,47 +595,45 @@ const Nav = ({
         </div>
       </div>
 
-      <Carousel
-        swipeable={false}
-        draggable={false}
-        itemsToShow={3}
-        showDots={true}
-        ssr={true} // means to render carousel on server-side.
-        // enableAutoPlay={true}
-        autoPlaySpeed={2000}
-        breakPoints={breakPoints}
-      >
-        {backState.slice(0, 8).map((item) => (
-          <div>
-            <div
-              className={`parent flex flex-col  text-sm  items-center relative`}
-            >
-              <img
-                src={`${img_300}${item.poster_path}`}
-                className="  w-[200px] h-[300px] rounded-md "
-              />
-              <p className=" flex text-center bg-black absolute justify-center text-white w-full text-[14px] rounded-t-md h-10 items-center opacity-70 ">
-                {item.original_title || item.original_name}
-              </p>
-              <div className="absolute  w-full h-full flex flex-col justify-end items-center">
-                <div className="flex  justify-center  items-center bg-black rounded-md w-full">
-                  <img
-                    src="https://i.ibb.co/JjzFV0X/imdb-logo-png-2.png"
-                    className=" rounded-sm h-4 w-14"
-                  />
+      <div className="tst w-full flex justify-center items-center ">
+        <Carousel
+          itemsToShow={3}
+          enableAutoPlay={true}
+          autoPlaySpeed={2500}
+          breakPoints={breakPoints}
+        >
+          {backState.slice(0, 8).map((item) => (
+            <div>
+              <div
+                className={`parent flex flex-col  text-sm  items-center relative`}
+              >
+                <img
+                  src={`${img_300}${item.poster_path}`}
+                  className="  w-[200px] h-[300px] rounded-md "
+                />
+                <p className=" flex text-center bg-black absolute justify-center text-white w-full text-[14px] rounded-t-md h-10 items-center opacity-70 ">
+                  {item.original_title || item.original_name}
+                </p>
+                <div className="absolute  w-full h-full flex flex-col justify-end items-center">
+                  <div className="flex  justify-center  items-center bg-black rounded-b-md w-full">
+                    <img
+                      src="https://i.ibb.co/JjzFV0X/imdb-logo-png-2.png"
+                      className=" rounded-sm h-4 w-14"
+                    />
 
-                  <p className="  text-[15px] text-[#ffc107] font-sans ml-1">
-                    {item.vote_average}
-                    <span className="text-[10px] text-white font-Times NewRoma">
-                      /10
-                    </span>
-                  </p>
+                    <p className="  text-[15px] text-[#ffc107] font-sans ml-1">
+                      {item.vote_average}
+                      <span className="text-[10px] text-white font-Times NewRoma">
+                        /10
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </Carousel>
+          ))}
+        </Carousel>
+      </div>
       <div className="w-full flex fixed bottom-0 right-0 z-50">
         <FooterComponenet
           setShowMenu={setShowMenu}

@@ -125,14 +125,14 @@ const Header = ({
               onClick={search}
               width={30}
               height={30}
-              className="bg-[#18181B] border-[#27272A] border h-8 cursor-pointer p-1 rounded-l-md "
+              className="bg-[#18181B]  border-[#27272A]  h-8 cursor-pointer p-1 rounded-l-md "
             />
             <input
               type="text"
               value={value}
               onChange={searchChange}
               placeholder="write your movie....."
-              className=" h-8 rounded-r-md border  sm:w-[280px] border-[#27272A] outline-0 text-center text-white  bg-[#18181B]"
+              className=" h-8 rounded-r-md   sm:w-[280px] border-red-500 outline-0 text-center text-white  bg-[#18181B]"
             />
           </div>
         </div>
