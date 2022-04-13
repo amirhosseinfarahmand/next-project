@@ -669,13 +669,13 @@ const Nav = ({
                     }}
                   >
                     <li
-                      className="text-[10px] bg-amber-600 mt-1 rounded-[15px] text-normal opacity-90"
+                      className="text-[12px] text-black bg-amber-600 mt-1 rounded-[15px] text-normal opacity-90"
                       onClick={() => allMoviesClick()}
                     >
                       All Movies
                     </li>
                     <li
-                      className="text-[10px] bg-amber-600 mt-1 rounded-[15px] text-normal ml-1 opacity-90"
+                      className="text-[12px] text-black bg-amber-600 mt-1 rounded-[15px] text-normal ml-1 opacity-90"
                       onClick={() => allSeriesClick()}
                     >
                       All Series
@@ -702,7 +702,7 @@ const Nav = ({
                   >
                     {movieGunres.genres.map((state) => (
                       <li
-                        className="text-[10px] bg-amber-600 opacity-90 m-1 rounded-[15px]"
+                        className="text-[12px] text-black bg-amber-600 opacity-90 m-1 rounded-[15px]"
                         onClick={() => genreClick(state.id, state.name)}
                       >
                         {state.name}
@@ -730,7 +730,7 @@ const Nav = ({
                   >
                     {seriesGenres.genres.map((state) => (
                       <li
-                        className="text-[10px] bg-amber-600 opacity-90 m-1 rounded-[15px]"
+                        className="text-[12px] text-black bg-amber-600 opacity-90 m-1 rounded-[15px]"
                         onClick={() => seriesClick(state.id, state.name)}
                       >
                         {state.name}
@@ -763,7 +763,7 @@ const Nav = ({
                     >
                       {imdbOption.map((state) => (
                         <li
-                          className="text-[10px] bg-amber-600 opacity-90 m-1 rounded-[15px]"
+                          className="text-[12px]  text-black bg-amber-600 opacity-90 m-1 rounded-[15px]"
                           onClick={() => imdbClick(state.value)}
                         >
                           {state.label}

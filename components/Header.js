@@ -132,7 +132,7 @@ const Header = ({
               value={value}
               onChange={searchChange}
               placeholder="write your movie....."
-              className=" h-8 rounded-r-md   sm:w-[280px] border-red-500 outline-0 text-center text-white  bg-[#18181B]"
+              className="h-8 input   sm:w-[280px] outline-0 text-center text-white  bg-[#18181B]"
             />
           </div>
         </div>
