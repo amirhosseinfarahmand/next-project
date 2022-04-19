@@ -643,14 +643,14 @@ const Nav = ({
         />
       </div>
 
-      <Transition in={inProp} timeout={1000}>
+      <Transition in={inProp} timeout={300}>
         {(state) => (
           <div
             style={{
               ...defaultStyle,
               ...transitionStyles[state],
             }}
-            className="  overflow-scroll z-40 bg-black flex flex-col items-center justify-evenly h-full right-0 bottom-0 fixed"
+            className="  overflow-scroll z-40 bg-[url('../images/black1.jpg')] flex flex-col items-center justify-evenly h-full right-0 bottom-0 fixed"
           >
             <div className="text-center overflow-hidden w-full bg-[#171717] p-2 rounded-[10px]">
               <p
