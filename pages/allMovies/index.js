@@ -49,7 +49,7 @@ export default function Home({
         topRatedMovies={topRatedMovies}
       />
       <div className=" h-24 bg-stone-900 shadow-lg shadow-stone-500 flex justify-center items-center">
-        <p className="tit text-[25px] font-Cursive">All Movies</p>
+        <p className="text-[25px] font-Georgia">All Movies</p>
       </div>
 
       <MainBox state={allMovie} />

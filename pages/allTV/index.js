@@ -41,7 +41,7 @@ export default function Home({ data, movieGunres, tvData, seriesGenres }) {
         seriesGenres={seriesGenres}
       />
       <div className=" h-24 bg-stone-900 shadow-lg shadow-stone-500 flex justify-center items-center">
-        <p className="text-[25px] font-Cursive ">All Series</p>
+        <p className="text-[25px] font-Georgia ">All Series</p>
       </div>
       <MainBox state={tvState} />
       <div className="my-[50px] flex justify-center">

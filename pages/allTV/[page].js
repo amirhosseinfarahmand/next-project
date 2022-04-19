@@ -53,7 +53,7 @@ export default function Home({
         seriesGenres={seriesGenres}
       />
       <div className=" h-24 bg-[#404040] shadow-lg shadow-stone-500 flex justify-center items-center">
-        <p className="text-[25px] font-Cursive ">All Series</p>
+        <p className="text-[25px] font-Georgia ">All Series</p>
       </div>
       <MainBox state={searchTvData.length ? searchTvData : tvData.results} />
 

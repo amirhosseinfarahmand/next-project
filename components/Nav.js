@@ -11,6 +11,7 @@ import { useGenreAction } from "../provider/GenreProvider";
 import { useActionSeries } from "../provider/SeriesProvider";
 import FooterComponenet from "./Footer";
 import { Transition } from "react-transition-group";
+
 import {
   useMovieTitleAction,
   useMovieTitle,
@@ -597,6 +598,8 @@ const Nav = ({
 
       <div className="tst w-full flex justify-center items-center ">
         <Carousel
+          enableMouseSwipe
+          onNextEnd={(e) => console.log(e)}
           itemsToShow={3}
           enableAutoPlay={true}
           autoPlaySpeed={2500}
@@ -636,10 +639,12 @@ const Nav = ({
       </div>
       <div className="w-full flex fixed bottom-0 right-0 z-50">
         <FooterComponenet
-          setShowMenu={setShowMenu}
+          setCollectionProp={setCollectionProp}
           setInProp={setInProp}
           inProp={inProp}
-          showMenu={showMenu}
+          setMovieProp={setMovieProp}
+          setSerieProp={setSerieProp}
+          setImdbProp={setImdbProp}
         />
       </div>
 
