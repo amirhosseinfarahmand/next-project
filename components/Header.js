@@ -94,7 +94,6 @@ const Header = ({
     setState(backState);
   };
 
-  console.log(y);
   return (
     <header className="flex  sm:flex-row bg-black  justify-between items-center">
       <div className="grid w-full  bg-black  sm:flex  sm:w-full sm:justify-between">

@@ -47,7 +47,7 @@ const CustomPagination = ({
       <div className="hidden md:flex ">
         <ThemeProvider theme={theme}>
           <Pagination
-            onChange={(e) => handelChangePage(e.target.textContent)}
+            onChange={(_, e) => handelChangePage(e)}
             count={numOfCount}
             color="primary"
             size="medium"
