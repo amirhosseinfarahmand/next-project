@@ -3,9 +3,7 @@ import Image from "next/image";
 import Header from "../../components/Header";
 import Nav from "../../components/Nav";
 import { useState, useEffect } from "react";
-import Footer from "../../components/Footer";
 import MainBox from "../../components/MainBox";
-import { useGenreAction, useGenre } from "../../provider/GenreProvider";
 import CustomPagination from "../../components/CustomPagination";
 
 export default function Home({
@@ -17,8 +15,6 @@ export default function Home({
 }) {
   const [show, setShow] = useState(false);
   const [state, setState] = useState(data.results);
-  const [backState, setBackState] = useState(data.results);
-  const setGenre = useGenreAction();
   const [tvState, setTvState] = useState(tvData.results);
   const [allMovie, setAllMovie] = useState(data.results);
   const [searchTvData, setSearchTvData] = useState([]);
@@ -52,7 +48,7 @@ export default function Home({
         movieGunres={movieGunres}
         seriesGenres={seriesGenres}
       />
-      <div className=" h-24 bg-[#404040] shadow-lg shadow-stone-500 flex justify-center items-center">
+      <div className=" h-24 bg-stone-900 shadow-lg shadow-stone-500 flex justify-center items-center">
         <p className="text-[25px] font-Georgia ">All Series</p>
       </div>
       <MainBox state={searchTvData.length ? searchTvData : tvData.results} />

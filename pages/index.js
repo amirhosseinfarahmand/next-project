@@ -3,12 +3,9 @@ import Image from "next/image";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import { useState } from "react";
-import FooterComponenet from "../components/Footer";
 import MainBox from "../components/MainBox";
 import { useGenreAction, useGenre } from "../provider/GenreProvider";
-import CustomPagination from "../components/CustomPagination";
-import { usePage, usePageAction } from "../provider/PageProvider";
-import { useRouter } from "next/dist/client/router";
+
 import Link from "next/link";
 
 export default function Home({
@@ -27,9 +24,6 @@ export default function Home({
   const [searchHome, setSearchHome] = useState([]);
 
   const allData = state.concat(tvState);
-  const setPage = usePageAction();
-  const page = usePage();
-  const router = useRouter();
 
   return (
     <div>

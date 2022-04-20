@@ -1,10 +1,8 @@
 import Head from "next/head";
-import Link from "next/dist/client/link";
 import { useRouter } from "next/dist/client/router";
 import Header from "../../components/Header";
 import Nav from "../../components/Nav";
 import { useState, useEffect, useRef } from "react";
-import Footer from "../../components/Footer";
 import MainBox from "../../components/MainBox";
 import { useGenre } from "../../provider/GenreProvider";
 import { useSeries } from "../../provider/SeriesProvider";
@@ -13,17 +11,10 @@ import { useSerieTitle } from "../../provider/TitleSerieProvider";
 export default function Home({ data, movieGunres, seriesGenres, tvData }) {
   const [show, setShow] = useState(false);
   const [state, setState] = useState(data.results);
-  const filteredGenres = useGenre();
-  const router = useRouter();
   const filteredSeries = useSeries();
   const [tvState, setTvState] = useState(tvData.results);
   const serieTitle = useSerieTitle();
 
-  useEffect(() => {
-    localStorage.setItem("serie", JSON.stringify(serieTitle));
-  }, [serieTitle]);
-
-  const ref = useRef("");
   return (
     <div>
       <Head>

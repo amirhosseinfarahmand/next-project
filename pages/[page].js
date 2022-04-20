@@ -4,10 +4,7 @@ import Header from "../components/Header";
 import Nav from "../components/Nav";
 import { useState, useEffect } from "react";
 import MainBox from "../components/MainBox";
-import { useGenreAction, useGenre } from "../provider/GenreProvider";
 import CustomPagination from "../components/CustomPagination";
-import { usePage, usePageAction } from "../provider/PageProvider";
-import { useRouter } from "next/dist/client/router";
 
 export default function Home({
   data,
@@ -18,21 +15,9 @@ export default function Home({
 }) {
   const [show, setShow] = useState(false);
   const [state, setState] = useState(data.results);
-  const [backState, setBackState] = useState(data.results);
-  const setGenre = useGenreAction();
   const [tvState, setTvState] = useState(tvData.results);
   const [allMovie, setAllMovie] = useState(data.results);
   const [searchData, setSearchData] = useState([]);
-  const setPage = usePageAction();
-  const page = usePage();
-  const router = useRouter();
-
-  //   useEffect(() => {
-  //     setState(data.results);
-  //     setTvState(tvData.results);
-
-  //     console.log("page effect");
-  //   }, [page]);
 
   return (
     <div>

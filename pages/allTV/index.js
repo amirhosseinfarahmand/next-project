@@ -4,12 +4,10 @@ import Nav from "../../components/Nav";
 import { useState } from "react";
 import MainBox from "../../components/MainBox";
 import Link from "next/link";
-import { ArrowRightIcon } from "@heroicons/react/outline";
 
 export default function Home({ data, movieGunres, tvData, seriesGenres }) {
   const [show, setShow] = useState(false);
   const [state, setState] = useState(data.results);
-  // const [backState, setBackState] = useState(data.results);
   const [tvState, setTvState] = useState(tvData.results);
   const [allMovie, setAllMovie] = useState(data.results);
 

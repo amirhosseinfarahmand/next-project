@@ -1,11 +1,5 @@
-import { useEffect } from "react";
 import { useState, useRef } from "react";
-import axios from "axios";
-import NavBox from "./NavBox";
-import Highlight from "react-highlight";
 import Carousel from "react-elastic-carousel";
-import { FaImdb } from "react-icons/fa";
-import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
 import { useGenreAction } from "../provider/GenreProvider";
 import { useActionSeries } from "../provider/SeriesProvider";
@@ -36,7 +30,6 @@ const Nav = ({
   tvData,
   setTvState,
   setAllMovie,
-  backUp,
   setSearchData,
   setSearchTvData,
   ref,
@@ -48,7 +41,6 @@ const Nav = ({
   const [movies, setMovies] = useState("none");
   const [series, setSeries] = useState("none");
   const [imdb, setImdb] = useState("none");
-  const [showMenu, setShowMenu] = useState(false);
   const [inProp, setInProp] = useState(false);
   const [collectionProp, setCollectionProp] = useState(false);
   const [MovieProp, setMovieProp] = useState(false);
@@ -60,9 +52,6 @@ const Nav = ({
   const actionSeries = useActionSeries();
   const setMovieTitle = useMovieTitleAction();
   const setSerieTitle = useSerieTitleAction();
-  const movieTitle = useMovieTitle();
-  const serieTitle = useSerieTitle();
-  const [test, setTest] = useState();
 
   ///mobile state
 

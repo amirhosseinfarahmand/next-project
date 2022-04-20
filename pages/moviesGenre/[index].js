@@ -4,10 +4,8 @@ import { useRouter } from "next/dist/client/router";
 import Header from "../../components/Header";
 import Nav from "../../components/Nav";
 import { useState, useEffect } from "react";
-import Footer from "../../components/Footer";
 import MainBox from "../../components/MainBox";
 import { useGenre, useGenreAction } from "../../provider/GenreProvider";
-import { useSeries } from "../../provider/SeriesProvider";
 import { useMovieTitle } from "../../provider/TitileMovieProvider";
 
 export default function Home({ data, movieGunres, seriesGenres, tvData }) {
