@@ -18,7 +18,9 @@ export default function Home({
   const [tvState, setTvState] = useState(tvData.results);
   const [allMovie, setAllMovie] = useState(data.results);
   const [searchData, setSearchData] = useState([]);
+  const [itemShow, setItemShow] = useState(false);
 
+  console.log(searchData);
   return (
     <div>
       <Head>
@@ -41,23 +43,27 @@ export default function Home({
         setState={setState}
         setAllMovie={setAllMovie}
         show={show}
+        setSearchData={setSearchData}
         backUp={backUp.results}
         setShow={setShow}
         backState={backUp.results}
         movieGunres={movieGunres}
         seriesGenres={seriesGenres}
+        setItemShow={setItemShow}
       />
       <div className=" h-24 bg-stone-900 shadow-lg shadow-stone-500 flex justify-center items-center">
         <p className="text-[25px] font-Georgia">All Movies and All Series</p>
       </div>
 
       <MainBox
-        state={
-          searchData.length ? searchData : data.results.concat(tvData.results)
-        }
+        state={itemShow ? searchData : data.results.concat(tvData.results)}
       />
+
       <div className="my-10 flex justify-center">
-        <CustomPagination setSearchData={setSearchData} />
+        <CustomPagination
+          setSearchData={setSearchData}
+          setItemShow={setItemShow}
+        />
       </div>
     </div>
   );

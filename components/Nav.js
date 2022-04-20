@@ -33,6 +33,7 @@ const Nav = ({
   setSearchData,
   setSearchTvData,
   ref,
+  setItemShow,
 }) => {
   const [gunres, setGunres] = useState([movieGunres.genres]);
   const [seriesGen, setSeriesGen] = useState([seriesGenres.genres]);
@@ -173,6 +174,13 @@ const Nav = ({
         if (router.pathname === "/allTV/[page]") {
           setSearchTvData(tvData.filter((items) => items.vote_average > 4));
         }
+        if (router.pathname === "/[page]") {
+          setSearchData(
+            tvData
+              .filter((items) => items.vote_average > 4)
+              .concat(state.filter((items) => items.vote_average > 4))
+          );
+        }
 
         setState(state.filter((items) => items.vote_average > 4));
         setTvState(tvData.filter((items) => items.vote_average > 4));
@@ -185,6 +193,20 @@ const Nav = ({
             tvData.filter(
               (items) => items.vote_average >= 4 && items.vote_average <= 5
             )
+          );
+        }
+
+        if (router.pathname === "/[page]") {
+          setSearchData(
+            tvData
+              .filter(
+                (items) => items.vote_average >= 4 && items.vote_average <= 5
+              )
+              .concat(
+                state.filter(
+                  (items) => items.vote_average >= 4 && items.vote_average <= 5
+                )
+              )
           );
         }
 
@@ -217,6 +239,14 @@ const Nav = ({
           setSearchTvData(tvData.filter((items) => items.vote_average > 5));
         }
 
+        if (router.pathname === "/[page]") {
+          setSearchData(
+            tvData
+              .filter((items) => items.vote_average > 5)
+              .concat(state.filter((items) => items.vote_average > 5))
+          );
+        }
+
         if (router.pathname === "/allMovies/[page]") {
           setSearchData(state.filter((items) => items.vote_average > 5));
         }
@@ -231,6 +261,20 @@ const Nav = ({
             tvData.filter(
               (items) => items.vote_average >= 5 && items.vote_average <= 6
             )
+          );
+        }
+
+        if (router.pathname === "/[page]") {
+          setSearchData(
+            tvData
+              .filter(
+                (items) => items.vote_average >= 5 && items.vote_average <= 6
+              )
+              .concat(
+                state.filter(
+                  (items) => items.vote_average >= 5 && items.vote_average <= 6
+                )
+              )
           );
         }
 
@@ -263,6 +307,14 @@ const Nav = ({
           setSearchTvData(tvData.filter((items) => items.vote_average > 6));
         }
 
+        if (router.pathname === "/[page]") {
+          setSearchData(
+            tvData
+              .filter((items) => items.vote_average > 6)
+              .concat(state.filter((items) => items.vote_average > 6))
+          );
+        }
+
         if (router.pathname === "/allMovies/[page]") {
           setSearchData(state.filter((items) => items.vote_average > 6));
         }
@@ -277,6 +329,20 @@ const Nav = ({
             tvData.filter(
               (items) => items.vote_average >= 6 && items.vote_average <= 7
             )
+          );
+        }
+
+        if (router.pathname === "/[page]") {
+          setSearchData(
+            tvData
+              .filter(
+                (items) => items.vote_average >= 6 && items.vote_average <= 7
+              )
+              .concat(
+                state.filter(
+                  (items) => items.vote_average >= 6 && items.vote_average <= 7
+                )
+              )
           );
         }
 
@@ -309,6 +375,14 @@ const Nav = ({
           setSearchTvData(tvData.filter((items) => items.vote_average > 7));
         }
 
+        if (router.pathname === "/[page]") {
+          setSearchData(
+            tvData
+              .filter((items) => items.vote_average > 7)
+              .concat(state.filter((items) => items.vote_average > 7))
+          );
+        }
+
         if (router.pathname === "/allMovies/[page]") {
           setSearchData(state.filter((items) => items.vote_average > 7));
         }
@@ -323,6 +397,20 @@ const Nav = ({
             tvData.filter(
               (items) => items.vote_average >= 7 && items.vote_average <= 8
             )
+          );
+        }
+
+        if (router.pathname === "/[page]") {
+          setSearchData(
+            tvData
+              .filter(
+                (items) => items.vote_average >= 7 && items.vote_average <= 8
+              )
+              .concat(
+                state.filter(
+                  (items) => items.vote_average >= 7 && items.vote_average <= 8
+                )
+              )
           );
         }
 
@@ -355,6 +443,14 @@ const Nav = ({
           setSearchTvData(tvData.filter((items) => items.vote_average > 8));
         }
 
+        if (router.pathname === "/[page]") {
+          setSearchData(
+            tvData
+              .filter((items) => items.vote_average > 8)
+              .concat(state.filter((items) => items.vote_average > 8))
+          );
+        }
+
         if (router.pathname === "/allMovies/[page]") {
           setSearchData(state.filter((items) => items.vote_average > 8));
         }
@@ -369,6 +465,20 @@ const Nav = ({
             tvData.filter(
               (items) => items.vote_average >= 8 && items.vote_average <= 9
             )
+          );
+        }
+
+        if (router.pathname === "/[page]") {
+          setSearchData(
+            tvData
+              .filter(
+                (items) => items.vote_average >= 8 && items.vote_average <= 9
+              )
+              .concat(
+                state.filter(
+                  (items) => items.vote_average >= 8 && items.vote_average <= 9
+                )
+              )
           );
         }
 
@@ -400,6 +510,15 @@ const Nav = ({
         if (router.pathname === "/allTV/[page]") {
           setSearchTvData(tvData.filter((items) => items.vote_average > 9));
         }
+
+        if (router.pathname === "/[page]") {
+          setSearchData(
+            tvData
+              .filter((items) => items.vote_average > 9)
+              .concat(state.filter((items) => items.vote_average > 9))
+          );
+        }
+
         if (router.pathname === "/allMovies/[page]") {
           setSearchData(state.filter((items) => items.vote_average > 9));
         }
@@ -420,6 +539,9 @@ const Nav = ({
 
         if (router.pathname === "allTV/[page]") {
           setSearchTvData(tvData);
+        }
+        if (router.pathname === "/[page]") {
+          setSearchData(state.concat(tvData));
         }
     }
   };
@@ -480,6 +602,15 @@ const Nav = ({
     entered: { opacity: 1, height: "auto" },
     exiting: { opacity: 1, height: "auto" },
     exited: { opacity: 0 },
+  };
+
+  const imdbChange = (value) => {
+    if (router.pathname === "/[page]") {
+      imdbClick(value);
+      setItemShow(true);
+    } else {
+      imdbClick(value);
+    }
   };
 
   return (
@@ -576,7 +707,7 @@ const Nav = ({
             {imdbOption.map((state) => (
               <li
                 className="m-1 bg-stone-700 rounded-md text-normal opacity-90 text-[15px] "
-                onClick={() => imdbClick(state.value)}
+                onClick={() => imdbChange(state.value)}
               >
                 {state.label}
               </li>
@@ -758,7 +889,7 @@ const Nav = ({
                       {imdbOption.map((state) => (
                         <li
                           className="text-[12px]  text-black bg-amber-600 opacity-90 m-1 rounded-[15px]"
-                          onClick={() => imdbClick(state.value)}
+                          onClick={() => imdbChange(state.value)}
                         >
                           {state.label}
                         </li>
