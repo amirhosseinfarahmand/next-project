@@ -553,8 +553,8 @@ const Nav = ({
   const duration = 1000;
 
   const defaultStyle = {
-    transition: `opacity ${duration}ms ease-in-out`,
-    opacity: 0,
+    transition: "2s",
+    // opacity: 0,
     padding: 1,
     width: "0",
     display: "flex",
@@ -584,10 +584,10 @@ const Nav = ({
   };
 
   const transitionStyles = {
-    entering: { opacity: 0 },
-    entered: { opacity: 1, width: "70%" },
-    exiting: { opacity: 1, width: "70%" },
-    exited: { opacity: 0 },
+    entering: { width: 0 },
+    entered: { width: "70%" },
+    exiting: { width: "70%" },
+    exited: { width: 0 },
   };
 
   const transitionUlStyles = {
